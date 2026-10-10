@@ -1,6 +1,6 @@
-# G4 Advanced M11/M12 英文單字複習互動工具
+# G2 Advanced S11/S12 英文單字複習互動工具
 
-專為小學四年級（G4 Advanced）M11 與 M12 單元打造的單字複習 Web 應用程式。
+專為小學二年級（G2 Advanced）s11與 s12單元打造的單字複習 Web 應用程式。
 
 - 線上體驗網址：[https://yuchunjie.github.io/shes_kl_Vocabulary/](https://yuchunjie.github.io/shes_kl_Vocabulary/)
 - 最佳體驗建議：請優先使用 **Google Chrome** 瀏覽器開啟。發音優先播放預錄真人錄音（單字整包載入、例句點到才逐句動態載入），缺漏或載入中自動改用 Web Speech 語音引擎補足。
