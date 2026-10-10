@@ -104,7 +104,7 @@ body.nokk .k { display:none; }
     <select id="rg" aria-label="範圍"></select>
     <input type="search" id="q" placeholder="搜尋英文或中文">
     <button class="ex" id="sa">全選目前範圍</button>
-    <button class="ex" id="sall">全選 1–114</button>
+    <button class="ex" id="sall">全選 1–150</button>
     <button class="ex" id="sc">清除選取</button>
     <span class="tg">
       自訂範圍
@@ -289,9 +289,9 @@ let shown = [];
 const count = () => $("pd").textContent = `匯出PDF（${selected.size}）`;
 
 $("rg").innerHTML =
-  '<option value="0">全部 1–114</option>' +
+  '<option value="0">全部 1–150</option>' +
   [1,2,3].map(i => {
-    const a=(i-1)*40+1, b=Math.min(i*40,114);
+    const a=(i-1)*40+1, b=Math.min(i*40,150);
     return `<option value="${a}">${a}–${b}</option>`;
   }).join("");
 
