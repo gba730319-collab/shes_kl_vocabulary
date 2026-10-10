@@ -108,9 +108,9 @@ body.nokk .k { display:none; }
     <button class="ex" id="sc">清除選取</button>
     <span class="tg">
       自訂範圍
-      <input type="number" id="ra" min="1" max="114" placeholder="起" style="width:65px">
+      <input type="number" id="ra" min="1" max="150" placeholder="起" style="width:65px">
       到
-      <input type="number" id="rb" min="1" max="114" placeholder="迄" style="width:65px">
+      <input type="number" id="rb" min="1" max="150" placeholder="迄" style="width:65px">
       <button class="ex" id="radd">加入</button>
       <button class="ex" id="rdel">取消</button>
     </span>
@@ -237,7 +237,44 @@ chef|廚師|n.|I want to be a chef.
 coach|教練|n.|I want to be a coach.
 help people|助人|phr.|I want to help people.
 drive|開車|v.|I want to drive.
-cook food|料理食物|phr.|I want to cook food.`;
+cook food|料理食物|phr.|I want to cook food.
+
+skunk|臭鼬|n.|A skunk is under the desk at school.
+school|學校|n.|A skunk is under the desk at school.
+spray|噴劑|n.|In spring, we need string and a can of bug spray.
+string|細繩|n.|In spring, we need string and a can of bug spray.
+splash|潑灑|v.|Nine big squids splash and play in the bay.
+squid|魷魚|n.|Nine big squids splash and play in the bay.
+scream|尖叫|v.|He screams and runs into his house.
+storm|風暴|n.|It is a big storm.
+place|地方|n.|Akna lives in a very cold place.
+skin|皮膚|n.|Her mother makes clothes and boots with the animal skins.
+rock|岩石|n.|There were some rocks.
+forest|森林|n.|Was there a forest? Yes, there was.
+bridge|橋|n.|Was there a bridge? No, there wasn't.
+river|河|n.|There was a river, but there wasn't a waterfall.
+waterfall|瀑布|n.|There was a river, but there wasn't a waterfall.
+wide|寬廣的|adj.|We couldn't jump over the wide river.
+narrow|狹窄的|adj.|We could walk on the narrow path.
+steep|陡峭的|adj.|We couldn't climb the steep mountain.
+flat|平坦的|adj.|We could walk on the flat rocks.
+rice|米飯|n.|People in the city like rice and ice cream.
+city|城市|n.|People in the city like rice and ice cream.
+giant|巨大的|adj.|The giant giraffe eats an orange in the cage.
+cage|牢籠|n.|The giant giraffe eats an orange in the cage.
+rose|玫瑰|n.|I have cheese, a red rose, and jeans on my legs.
+cheese|起司|n.|I have cheese, a red rose, and jeans on my legs.
+reporter|記者|n.|Alex is a weather reporter for today.
+search|尋找|v.|He searched Internet weather sites.
+daytime|白天|n.|These clothes protect their skin from the hot sun in the daytime.
+protect|保護|v.|These clothes protect their skin from the hot sun in the daytime.
+strange|奇怪的|adj.|Sound a little strange?
+concert|音樂會|n.|It is a series of outdoor concerts.
+contest|比賽|n.|Mr. Ford was at the Dirtiest Car Contest.
+judge|評審|n.|Judges checked his car.
+prize|獎品|n.|Mr. Ford won first prize.
+drop|掉落|v.|He just dropped them to the ground.
+bucket|水桶|n.|Then I put them in buckets.`;
 
 const W = DATA.trim().split("\n").map((line,i) => {
   const [w,z,p,s] = line.split("|");
@@ -332,7 +369,7 @@ $("sa").onclick = () => { shown.forEach(x=>selected.add(x.n)); render(); };
 $("sall").onclick = () => {
   W.forEach(x=>selected.add(x.n));
   render();
-  $("msg").textContent = "已全選 114 個單字。";
+  $("msg").textContent = "已全選 150 個單字。";
 };
 $("sc").onclick = () => { selected.clear(); render(); };
 
@@ -345,7 +382,7 @@ function rangeAction(add) {
   if (isNaN(a)) a=b;
   if (isNaN(b)) b=a;
   if (a>b) [a,b]=[b,a];
-  a=Math.max(1,a); b=Math.min(114,b);
+  a=Math.max(1,a); b=Math.min(150,b);
   let changed=0;
 
   for (let i=a;i<=b;i++) {
